@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    background-image: url('/imges/ysbackgroud.jpg');
+    background-repeat: no-repeat;
+    /* 设置图片不重复*/
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    /* 相对定位 */
+    position: relative;
+}
+
+.nav {
+    position: absolute;
+    left: 30%;
+}
+
+ul li {
+    list-style: none;
+}
+
+.nav ul li {
+    float: left;
+    margin: 10px;
+    /* border: 1px solid red; */
+    width: 100px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+#welcome {
+    position: absolute;
+    top: 100px;
+    left: 35%;
+    color: #666;
+    font-style: oblique;
+    font-size: 2em;
+}
+
+.introduction {
+    position: absolute;
+    top: 200px;
+    left: 20%;
+}
+
+.introduction p {
+    color: aquamarine;
+    font-style: italic;
+    font-size: large
+}
+
+.renwulan {
+    /* 弹性布局 */
+    display: flex;
+    width: 100%;
+    position: absolute;
+    /* background-color: #666; */
+    height: 300px;
+    top: 400px;
+    margin: 10px;
+    justify-content: center;
+}
+
+.renwulan-son {
+    width: 200px;
+    height: 300px;
+    /* border: 1px solid red; */
+    overflow: hidden;
+    margin: 10px;
+    position: relative;
+}
+
+.renwulan-son img {
+    width: 200px;
+    height: 300px;
+    transition: all .4s;
+
+    /* 四个角以20px为r的圆角边框，也可以只写20px代表四个角都是 */
+    border-radius: 20px 20px 20px 20px;
+}
+
+.renwulan-son:hover img {
+    transform: scale(1.2);
+}
+
+.renwulan-son h4 {
+    position: absolute;
+    top: 310px;
+    color: white;
+}
+
+.renwulan-son:hover h4 {
+    /* 角色简介上移 */
+    transform: translateY(-30px);
+}
+
+#lunbotu {
+    position: absolute;
+    top: 800px;
+    left: 40%;
+}
+
+.swiper {
+    width: 500px;
+    height: 300px;
+
+}
+
+.swiper>img {
+    width: 100%;
+    height: 100%;
+}

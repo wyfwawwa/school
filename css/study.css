@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav {
+    margin: 0 auto;
+    width: 800px;
+    height: 80px;
+}
+
+body {
+    background: linear-gradient(200deg, #e3c5eb, #a9c1ed);
+}
+
+.nav>ul li {
+    width: 100px;
+    display: inline-block;
+    /* border: 1px red solid; */
+    text-align: center;
+    list-style: none;
+}
+
+.nav>ul li a {
+    float: left;
+    width: 140px;
+    line-height: 80px;
+    font-style: inherit;
+    font-size: 1em;
+    color: crimson;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.info-left {
+    position: relative;
+}
+
+.info-left-touxiang {
+    width: 300px;
+    height: 400px;
+    position: fixed;
+}
+
+.info-left-touxiang img {
+    width: 300px;
+    height: 300px;
+}
+
+.info-left-touxiang p {
+    text-align: center;
+    color: #666;
+}
+
+.info-left-xinxi ul li {
+    float: left;
+    width: 80px;
+    text-align: center;
+    /* border: 1px solid #666; */
+}
+
+.study {
+    position: relative;
+
+}
+
+.study-algorithm {
+    position: absolute;
+    top: 10px;
+    left: 400px;
+    /* float: left; */
+}
+
+.study h4 {
+    text-align: center;
+}
+
+.study-os {
+    position: absolute;
+    top: 600px;
+    left: 500px;
+    /* margin: 5px auto auto 500px;
+    float: left; */
+}
+
+.liuyanban {
+    position: absolute;
+    top: 400px;
+}

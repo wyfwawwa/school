@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习</title>
+    <link rel="stylesheet" href="./css/study.css">
+</head>
+
+<body>
+    <div class="nav">
+        <ul class="nav-ul">
+            <li><a href="./index.html">首页</a></li>
+            <li><a href="./geren.html">个人</a></li>
+            <li><a href="./study.html">学习</a></li>
+            <li><a href="#">关注</a></li>
+            <li><a href="./yuanshen.html">娱乐</a></li>
+        </ul>
+        </ul>
+    </div>
+
+    <div class="info-left">
+        <div class="info-left-touxiang">
+            <img src="./imges/maomao.jpg" alt="">
+            <p>fufuyu</p>
+            <div class="info-left-xinxi">
+                <ul>
+                    <li>关注</li>
+                    <li>粉丝</li>
+                    <li>阅读量</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="liuyanban">
+            <h4 style="text-align:center;">留言板</h4>
+            <textarea name="text" cols="40" rows="10">
+            </textarea>
+            <button name="text">提交</button>
+            <ul></ul>
+        </div>
+        <script src="./js/liuyanban.js"></script>
+    </div>
+
+    <div class="study">
+        <div class="study-algorithm">
+            <h4>快速排序算法</h4>
+            <pre>
+                <!-- &lt 表示<
+                    &gt表示> -->
+                    #include  &ltiostream&gt
+                    using namespace std;                   
+                    const int N = 100010;                   
+                    int q[N]              
+                    void quick_sort(int q[], int l, int r)
+                    {
+                        if (l >= r) return;
+                        <!-- 定位，i从最左边开始向右移动，j从最右边开始向左移动，
+                        基准数取为最中间的一个数 -->
+                        int i = l - 1, j = r + 1, x = q[l + r >> 1];
+                        while (i < j)
+                        {
+                            <!-- 两边移动找到左边第一个大于基准数的数
+                            右边第一个小于基准数的数-->
+                            do i ++ ; while (q[i] < x);
+                            do j -- ; while (q[j] > x);
+                            <!-- 如果找到左边小于右边，交换 -->
+                            if (i < j) swap(q[i], q[j]);
+                        }
+                        <!-- 递归 划分两边-->
+                        quick_sort(q, l, j);
+                        quick_sort(q, j + 1, r);
+                    }                    
+                    int main()
+                    {
+                        int n;
+                        scanf("%d", &n);
+                    
+                        for (int i = 0; i < n; i ++ ) scanf("%d", &q[i]);
+                    
+                        quick_sort(q, 0, n - 1);
+                    
+                        for (int i = 0; i < n; i ++ ) printf("%d ", q[i]);
+                    
+                        return 0;
+                    }
+            </pre>
+        </div>
+        <div class="study-os">
+            <h4>操作系统-死锁</h4>
+            <p>当出现死锁时，进程永远不能完成并且系统资源被阻碍使用,
+                阻止了其他作业开始执行。<br>在讨论处理死锁问题的各种方法之前，先深入讨论一下死锁的特征。</p>
+            <br>
+            <ol>
+                <li>互斥：至少有一个资源必须处于非共享模式，即一次只有一个进程使用。如果另一进程申请该资源，那么申请进程必须等到该资源被释放为止。
+
+                </li>
+                <li>占有并等待：一个进程必须占有至少一个资源，并等待另一资源，而该资源为其他进程所占有。</li>
+                <li>
+                    非抢占：资源不能被抢占，即资源只能在进程完成任务后自动释放。
+                </li>
+                <li>
+                    循环等待：有一组等待进程{P0，P1，···，Pn}，P0等待的资源为P1所占有，P1等待的资源为P2所占有，...，Pn-1等待的资源为Pn所占有，Pn等待的资源为P0所占有。
+                </li>
+            </ol>
+        </div>
+    </div>
+
+
+
+</body>
+
+</body>
+
+
+</html>

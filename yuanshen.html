@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原神</title>
+    <link rel="stylesheet" href="./css/yuanshen.css">
+
+    <link rel="stylesheet" href="./css/animate.min.css">
+
+    <!-- CDN地址-->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" /> -->
+    <link rel="stylesheet" href="./css/swiper.min.css">
+
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <div class="nav">
+        <ul class="nav-ul">
+            <li><a href="./index.html">首页</a></li>
+            <li><a href="./geren.html">个人</a></li>
+            <li><a href="./study.html">学习</a></li>
+            <li><a href="#">关注</a></li>
+            <li><a href="./yuanshen.html">娱乐</a></li>
+        </ul>
+        </ul>
+    </div>
+    <!-- animate动画 -->
+    <div id="welcome" class="animate__animated animate__backInDown">欢迎来到提瓦特大陆！</div>
+
+    <!-- 简介 -->
+    <div class="introduction">
+        <p>这里是七种元素交汇的幻想世界“提瓦特”。</p>
+        <p>在遥远的过去，人们藉由对神灵的信仰，获赐了驱动元素的力量，得以在荒野中筑起家园。</p>
+        <p>五百年前，古国的覆灭却使得天地变异……</p>
+        <p>如今，席卷大陆的灾难已经停息，和平却仍未如期光临。</p>
+        <p>作为故事的主人公，你从世界之外漂流而来，降临大地。</p>
+        <p>你将在这广阔的世界中，自由旅行、结识同伴、寻找掌控尘世元素的七神，直到与分离的血亲重聚。</p>
+    </div>
+
+    <!-- 人物栏 -->
+    <div class="renwulan">
+        <div class="renwulan-son animate__animated animate__backInDown">
+            <img src="./imges/yaganyu.jpg" alt="">
+            <h4>甘雨</h4>
+        </div>
+
+        <div class="renwulan-son animate__animated animate__backInDown">
+            <img src="./imges/yskl.jpg" alt="">
+            <h4>可莉</h4>
+        </div>
+        <div class="renwulan-son animate__animated animate__backInDown">
+            <img src="./imges/yszl.jpg" alt="">
+            <h4>钟离</h4>
+        </div>
+        <div class="renwulan-son animate__animated animate__backInDown">
+            <img src="./imges/yswd.jpg" alt="">
+            <h4>温迪</h4>
+        </div>
+    </div>
+
+    <!-- 轮播图 -->
+    <div id="lunbotu">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide ">
+                    <img src="./imges/ysmde.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./imges/yslyue.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./imges/ysdqi.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./imges/yscshen.jpg" alt="">
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- 如果需要滚动条 -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+
+        <script src="./js/swiper-bundle.min.js"></script>
+
+        <script>
+            var mySwiper = new Swiper('.swiper', {
+                direction: 'horizontal', // 垂直切换选项
+                loop: true, // 循环模式选项
+                // 加入速度
+                speed: 150,
+
+                autoplay: {
+                    delay: 1500,
+                },
+
+                // 如果需要分页器
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // 如果需要前进后退按钮
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // 如果需要滚动条
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+            })        
+        </script>
+    </div>
+</body>
+
+</html>

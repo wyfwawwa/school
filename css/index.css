@@ -1,0 +1,126 @@
+* {
+    /* 初始化内外边距 */
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /* 100%窗口高度 */
+    height: 100vh;
+    /* 弹性布局 居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 渐变背景 */
+    /* background: linear-gradient(200deg, #e3c5eb, #a9c1ed); */
+    background-image: linear-gradient(125deg, #e06464, #a5da9a, #3b75e9, #e44bff);
+    background-size: 500%;
+    animation: animate 5s infinite;
+    /* 溢出隐藏
+    overflow: hidden; */
+    position: relative;
+}
+
+header {
+    position: absolute !important;
+    top: 10px;
+    left: 10px;
+    color: aqua;
+}
+
+.nav {
+    position: relative;
+}
+
+.nav img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    left: 35%;
+    top: -300px;
+    -webkit-animation: rotation 15s linear infinite;
+    animation: rotation 15s linear infinite;
+
+}
+
+/* 头像旋转 */
+@keyframes rotation {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+a {
+
+    /* 取消下划线 */
+    text-decoration: none;
+}
+
+.nav ul li {
+    float: left;
+    width: 100px;
+    /* border: 1px red solid; */
+    text-align: center;
+    list-style: none;
+}
+
+.nav ul li a {
+    font-style: inherit;
+    font-size: 1em;
+    color: crimson;
+    text-align: center;
+}
+
+.nav ul li a:hover {
+    transform: scale(1.2);
+    color: #666;
+}
+
+.main {
+    /* background-color: #666; */
+    left: 22%;
+    top: 100px;
+    position: absolute;
+}
+
+.main h4 {
+    text-align: center;
+    color: aqua;
+    text-shadow: 2px 3px red;
+    font-size: 2em;
+    font-style: italic;
+    text-shadow: 2px 2px greenyellow;
+}
+
+.main p {
+
+    letter-spacing: 5px;
+    font-size: larger;
+    color: aqua;
+    text-shadow: 2px 2px red;
+
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    float: right;
+
+}
+
+footer h4 {
+    text-align: center;
+}
+
+footer ul li {
+    list-style: none;
+    color: #a5da9a;
+    float: left;
+    width: 100px;
+    text-align: center;
+}
