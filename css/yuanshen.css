@@ -5,7 +5,7 @@
 
 body {
 
-    background-image: url('./imges/ysbackgroud.jpg');
+    background-image: url('../imges/ysbackgroud.jpg');
     background-repeat: no-repeat;
     /* 设置图片不重复*/
     background-size: 100% 100%;
